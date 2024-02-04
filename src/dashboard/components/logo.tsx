@@ -4,9 +4,9 @@ export const Logo = () => {
     <img
       src="/rooch_black_combine.svg"
       alt="Logo"
-      height={120}
-      width={120}
-      className="cursor-pointer"
+      height={130}
+      width={130}
+      className="cursor-pointer hover:opacity-75 transition"
     />
   );
 };
