@@ -3,7 +3,7 @@ import { SidebarRoutes } from "./sidebar-routes";
 
 export const Sidebar = () => {
   return (
-    <div className="h-full border-r dark:border-zinc-900 flex flex-col overflow-y-auto bg-white dark:bg-zinc-900 shadow-sm">
+    <div className="h-full border-r border-zinc-100 flex flex-col overflow-y-auto ">
       <div className="flex items-center justify-start p-6">
         <Logo />
       </div>
