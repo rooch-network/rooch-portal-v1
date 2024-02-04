@@ -1584,11 +1584,6 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-resizable-panels@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/react-resizable-panels/-/react-resizable-panels-2.0.3.tgz#63c47721b86f82dbb740b725595d9ac08d651aa5"
-  integrity sha512-m0upi03cdqCt/g/dUxRQkHiBzo0UDtMIYwcf8qhKM+QG0cnpusOVFKOD2ElpGrtxB/oIxTItuKYsDOeu76JHvg==
-
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
