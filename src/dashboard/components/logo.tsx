@@ -36,9 +36,7 @@ export const Logo = () => {
     <img
       src={logoSrc}
       alt="Logo"
-      width={130}
-      height={130}
-      className="cursor-pointer hover:opacity-75 transition"
+      className="cursor-pointer hover:opacity-75 transition md:h-[150px] md:w-[150px] h-[70px] w-[100px]"
     />
   );
 };
