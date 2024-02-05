@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "@/components/theme-provider";
+import { useNavigate } from "react-router-dom";
 
 export const Logo = () => {
   const { theme } = useTheme();
+  const navigate = useNavigate();
   const [logoSrc, setLogoSrc] = useState<string>("/rooch_black_combine.svg");
+
+  const onClick = () => {
+    navigate("/dashboard/profile");
+  };
 
   useEffect(() => {
     switch (theme) {
@@ -36,7 +42,8 @@ export const Logo = () => {
     <img
       src={logoSrc}
       alt="Logo"
-      className="cursor-pointer hover:opacity-75 transition md:h-[150px] md:w-[150px] h-[70px] w-[100px]"
+      onClick={onClick}
+      className="cursor-pointer hover:opacity-75 transition md:h-[145px] md:w-[145px] h-[70px] w-[100px]"
     />
   );
 };
