@@ -1,1 +1,3 @@
-export const NavbarRoutes = () => {};
+export const NavbarRoutes = () => {
+  return <div></div>;
+};
