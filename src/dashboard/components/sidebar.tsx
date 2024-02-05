@@ -1,3 +1,4 @@
+import { ProfileInfo } from "@/components/profile-info";
 import { Logo } from "./logo";
 import { SidebarRoutes } from "./sidebar-routes";
 
@@ -9,6 +10,11 @@ export const Sidebar = () => {
       </div>
       <div className="flex flex-col w-full">
         <SidebarRoutes />
+      </div>
+      <div className="flex items-end justify-start h-full w-full p-6">
+        <div className="flex items-center w-full">
+          <ProfileInfo />
+        </div>
       </div>
     </div>
   );

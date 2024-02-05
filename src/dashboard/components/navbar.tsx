@@ -1,6 +1,6 @@
 import { ModeToggle } from "@/components/mode-toggle";
-import { Button } from "@/components/ui/button";
 import { MobileSidebar } from "./mobile-sidebar";
+import { WalletConnect } from "./wallet-connect";
 
 export const Navbar = () => {
   return (
@@ -11,9 +11,7 @@ export const Navbar = () => {
           {/* Mode Toggle */}
           <ModeToggle />
           {/* Wallet Connect */}
-          <Button onClick={() => {}} variant="default" size="sm">
-            Connect Wallet
-          </Button>
+          <WalletConnect />
         </div>
       </div>
     </div>
