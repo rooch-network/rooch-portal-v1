@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Rooch Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Rooch Portal is a comprehensive dashboard designed to simplify the management of Bitcoin wallets, such as Unisat, and to provide users with an intuitive interface to manage their Bitcoin and Rooch accounts. This portal offers a centralized platform for tracking and organizing all assets, inscriptions, and other related financial activities.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
 
-## Expanding the ESLint configuration
+- Wallet Connection: Easily connect and manage your Bitcoin wallets, such as Unisat.
+- Asset Management: View and manage your Bitcoin and Rooch account assets in one place.
+- Inscription Tracking: Keep track of all your inscriptions and related activities.
+- User-Friendly Interface: Navigate through your financial information with an intuitive and user-friendly dashboard.
+- Secure and Reliable: Prioritizes the security and privacy of your financial data.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- Node.js
+- npm or yarn
+- A Bitcoin wallet (e.g., Unisat)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/TwilightLogic/rooch-portal-v1.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+
+```bash
+cd rooch-portal
+```
+
+3. Install dependencies:
+
+```bash
+yarn install
+```
+
+4. Start the application:
+
+```bash
+yarn start
+```
+
+## Usage
+
+After launching Rooch Portal, follow these steps:
+
+1. Connect your Bitcoin wallet (e.g., Unisat) using the 'Connect Wallet' option.
+2. Once connected, navigate through the dashboard to view your assets and inscriptions.
+3. Use the provided tools and features to manage and organize your financial data effectively.
