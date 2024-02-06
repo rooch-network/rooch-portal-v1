@@ -2,7 +2,7 @@ import { Settings, Target, User } from "lucide-react";
 import { SidebarItem } from "./sidebar-item";
 
 const userRoutes = [
-  { icon: User, label: "Profile", href: "/dashboard/profile" },
+  { icon: User, label: "Profile", href: "/dashboard/portfolio" },
   { icon: Target, label: "Activity", href: "/dashboard/activity" },
   { icon: Settings, label: "Setting", href: "/dashboard/setting" },
 ];

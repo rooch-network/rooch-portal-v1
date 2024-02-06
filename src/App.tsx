@@ -1,4 +1,4 @@
-import { DashboardLayout } from "./dashboard/dashboard-layout";
+import { DashboardLayout } from "./(dashboard)/dashboard-layout";
 import { ThemeProvider } from "@/components/theme-provider";
 
 function App() {
