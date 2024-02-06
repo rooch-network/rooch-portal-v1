@@ -1,4 +1,5 @@
 import React from "react";
+import "./lib/i18n.ts";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "../app/globals.css";
