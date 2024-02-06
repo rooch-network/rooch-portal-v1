@@ -7,9 +7,9 @@ export const MainContent = () => {
   return (
     <div>
       <Routes>
-        <Route path="/dashboard/portfolio" element={<PortfolioLayout />} />
-        <Route path="/dashboard/activity" element={<ActivityLayout />} />
-        <Route path="/dashboard/setting" element={<SettingLayout />} />
+        <Route path="/" element={<PortfolioLayout />} />
+        <Route path="/activity" element={<ActivityLayout />} />
+        <Route path="/setting" element={<SettingLayout />} />
       </Routes>
     </div>
   );
