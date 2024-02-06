@@ -1,5 +1,4 @@
 import { Moon, Settings, Sun } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -10,21 +9,38 @@ import {
 import { useTheme } from "@/components/theme-provider";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="icon"
-          className="border-zinc-200/40 dark:border-zinc-700/80 dark:hover:bg-zinc-700/80"
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </DropdownMenuTrigger>
+  const ThemeIcon = () => {
+    switch (theme) {
+      case "light":
+        return (
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+        );
+      case "dark":
+        return (
+          <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+        );
+      default:
+        return (
+          <Settings className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+        );
+    }
+  };
+
+  const getThemeName = () => {
+    switch (theme) {
+      case "light":
+        return "Light";
+      case "dark":
+        return "Dark";
+      default:
+        return "System";
+    }
+  };
+
+  const dropdownMenu = () => {
+    return (
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <div className="flex items-center justify-start gap-x-2">
@@ -45,6 +61,44 @@ export function ModeToggle() {
           </div>
         </DropdownMenuItem>
       </DropdownMenuContent>
-    </DropdownMenu>
+    );
+  };
+
+  return (
+    <>
+      {/* mobile */}
+      <div className="md:hidden">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="border-zinc-200/40 dark:border-zinc-700/80 dark:hover:bg-zinc-700/80 select-none"
+            >
+              <ThemeIcon />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+          </DropdownMenuTrigger>
+          {dropdownMenu()}
+        </DropdownMenu>
+      </div>
+
+      {/* desktop */}
+      <div className="hidden md:flex">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="border-zinc-200/40 dark:border-zinc-700/80 dark:hover:bg-zinc-700/80 select-none"
+            >
+              <ThemeIcon />
+              <span className="ml-2">{getThemeName()}</span>
+            </Button>
+          </DropdownMenuTrigger>
+          {dropdownMenu()}
+        </DropdownMenu>
+      </div>
+    </>
   );
 }

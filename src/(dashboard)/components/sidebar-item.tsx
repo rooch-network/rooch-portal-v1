@@ -6,9 +6,15 @@ interface SidebarItemProps {
   icon: LucideIcon;
   label: string;
   href: string;
+  onClose?: () => void;
 }
 
-export const SidebarItem = ({ icon: Icon, label, href }: SidebarItemProps) => {
+export const SidebarItem = ({
+  icon: Icon,
+  label,
+  href,
+  onClose,
+}: SidebarItemProps) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -19,6 +25,9 @@ export const SidebarItem = ({ icon: Icon, label, href }: SidebarItemProps) => {
 
   const onClick = () => {
     navigate(href);
+    if (onClose) {
+      onClose(); // 在导航之后调用关闭函数
+    }
   };
 
   return (

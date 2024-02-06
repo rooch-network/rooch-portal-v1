@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import { PortfolioLayout } from "../(portfolio)/portfolio-layout";
-import { ActivityLayout } from "../(activity)/activity-layout";
-import { SettingLayout } from "../(setting)/setting-layout";
+import { PortfolioLayout } from "../portfolio/portfolio-layout";
+import { ActivityLayout } from "../activity/activity-layout";
+import { SettingLayout } from "../setting/setting-layout";
 
 export const MainContent = () => {
   return (
