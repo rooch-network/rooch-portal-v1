@@ -6,10 +6,10 @@ export const WalletConnect = () => {
 
   return (
     <>
-      <Button variant="default" size="sm" className="hidden md:flex ml-2">
+      <Button variant="default" size="sm" className="hidden md:flex">
         {t("WalletConnect.connectWallet")}
       </Button>
-      <Button variant="default" size="sm" className="md:hidden flex ml-2">
+      <Button variant="default" size="sm" className="md:hidden flex">
         {t("WalletConnect.connectWallet")}
       </Button>
     </>
