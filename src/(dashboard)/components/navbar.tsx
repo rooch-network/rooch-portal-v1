@@ -3,7 +3,7 @@ import { NavbarItem } from "./navbar-item";
 
 export const Navbar = () => {
   return (
-    <div className="py-4 px-4 md:px-6 border-b h-full flex items-center">
+    <div className="py-4 px-4 md:px-6 border-b h-full flex items-center shadow-sm">
       <div className="flex items-center justify-between md:justify-end w-full gap-x-2">
         <MobileSidebar />
         <NavbarItem />
