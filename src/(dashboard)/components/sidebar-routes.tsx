@@ -1,4 +1,4 @@
-import { Settings, Target, User } from "lucide-react";
+import { Bitcoin, Target, UserCog } from "lucide-react";
 import { SidebarItem } from "./sidebar-item";
 import { useTranslation } from "react-i18next";
 
@@ -9,9 +9,9 @@ interface SidebarRoutesProps {
 export const SidebarRoutes = ({ onClose }: SidebarRoutesProps) => {
   const { t } = useTranslation();
   const routes = [
-    { icon: User, label: t("Sidebar.portfolio"), href: "/" },
+    { icon: Bitcoin, label: t("Sidebar.portfolio"), href: "/" },
     { icon: Target, label: t("Sidebar.activity"), href: "/activity" },
-    { icon: Settings, label: t("Sidebar.setting"), href: "/setting" },
+    { icon: UserCog, label: t("Sidebar.setting"), href: "/setting" },
   ];
 
   return (
