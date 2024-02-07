@@ -50,11 +50,7 @@ export const LanguageSwitcher = () => {
       <div className="md:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="border-zinc-200/40 dark:border-zinc-700/80 dark:hover:bg-zinc-700/80"
-            >
+            <Button variant="outline" size="icon" className="select-none">
               {languageIcon()}
               <span className="sr-only">Change language</span>
             </Button>
@@ -68,12 +64,12 @@ export const LanguageSwitcher = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
-              variant="ghost"
+              variant="outline"
               size="sm"
               onClick={() =>
                 switchLanguage(i18n.language === "en" ? "zh" : "en")
               }
-              className="flex items-center justify-center transition-all"
+              className="flex items-center justify-center select-none"
             >
               {languageIcon()}
               <span className="ml-2">{getLanguageName()}</span>
