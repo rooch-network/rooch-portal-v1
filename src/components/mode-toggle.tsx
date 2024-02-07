@@ -7,8 +7,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "@/components/theme-provider";
+import { useTranslation } from "react-i18next";
 
-export function ModeToggle() {
+export const ModeToggle = () => {
+  const { t } = useTranslation();
   const { theme, setTheme } = useTheme();
 
   const ThemeIcon = () => {
@@ -31,11 +33,11 @@ export function ModeToggle() {
   const getThemeName = () => {
     switch (theme) {
       case "light":
-        return "Light";
+        return t("Theme.light");
       case "dark":
-        return "Dark";
+        return t("Theme.dark");
       default:
-        return "System";
+        return t("Theme.system");
     }
   };
 
@@ -45,19 +47,19 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <div className="flex items-center justify-start gap-x-2">
             <Sun className="h-[1rem] w-[1rem] rotate-0 transition-all" />
-            Light
+            {t("Theme.light")}
           </div>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <div className="flex items-center justify-start gap-x-2">
             <Moon className="h-[1rem] w-[1rem] rotate-0 transition-all " />
-            Dark
+            {t("Theme.dark")}
           </div>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <div className="flex items-center justify-start gap-x-2">
             <Settings className="h-[1rem] w-[1rem] rotate-0 transition-all" />
-            System
+            {t("Theme.system")}
           </div>
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -101,4 +103,4 @@ export function ModeToggle() {
       </div>
     </>
   );
-}
+};

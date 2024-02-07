@@ -1,0 +1,15 @@
+{
+  "Sidebar": {
+    "portfolio": "投资组合",
+    "activity": "活动",
+    "setting": "设置"
+  },
+  "Theme": {
+    "light": "浅色模式",
+    "dark": "深色模式",
+    "system": "跟随系统"
+  },
+  "WalletConnect": {
+    "connectWallet": "连接钱包"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "Sidebar": {
+    "portfolio": "Portfolio",
+    "activity": "Activity",
+    "setting": "Setting"
+  },
+  "Theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "WalletConnect": {
+    "connectWallet": "Connect Wallet"
+  }
+}
