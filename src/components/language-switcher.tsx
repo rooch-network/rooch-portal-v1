@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Globe, Languages } from "lucide-react";
+import { Globe2, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -19,7 +19,7 @@ export const LanguageSwitcher = () => {
     return i18n.language === "zh" ? (
       <Languages className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
     ) : (
-      <Globe className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+      <Globe2 className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
     );
   };
 
@@ -31,7 +31,7 @@ export const LanguageSwitcher = () => {
     <DropdownMenuContent align="end">
       <DropdownMenuItem onClick={() => switchLanguage("en")}>
         <div className="flex items-center justify-start gap-x-2">
-          <Globe className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+          <Globe2 className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
           English
         </div>
       </DropdownMenuItem>
@@ -50,11 +50,7 @@ export const LanguageSwitcher = () => {
       <div className="md:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="border-zinc-200/40 dark:border-zinc-700/80 dark:hover:bg-zinc-700/80"
-            >
+            <Button variant="ghost" size="icon" className="select-none">
               {languageIcon()}
               <span className="sr-only">Change language</span>
             </Button>
@@ -73,7 +69,7 @@ export const LanguageSwitcher = () => {
               onClick={() =>
                 switchLanguage(i18n.language === "en" ? "zh" : "en")
               }
-              className="flex items-center justify-center transition-all"
+              className="flex items-center justify-center select-none"
             >
               {languageIcon()}
               <span className="ml-2">{getLanguageName()}</span>
