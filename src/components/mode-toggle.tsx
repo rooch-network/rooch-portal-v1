@@ -72,7 +72,7 @@ export const ModeToggle = () => {
       <div className="md:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon" className="select-none">
+            <Button variant="ghost" size="icon" className="select-none">
               <ThemeIcon />
               <span className="sr-only">Toggle theme</span>
             </Button>
@@ -85,7 +85,7 @@ export const ModeToggle = () => {
       <div className="hidden md:flex">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="sm" className="select-none">
+            <Button variant="ghost" size="sm" className="select-none">
               <ThemeIcon />
               <span className="ml-2">{getThemeName()}</span>
             </Button>
