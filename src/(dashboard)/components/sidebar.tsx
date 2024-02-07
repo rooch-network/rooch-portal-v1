@@ -1,4 +1,4 @@
-import { ProfileInfo } from "@/components/profile-info";
+// import { ProfileInfo } from "@/components/profile-info";
 import { Logo } from "./logo";
 import { SidebarRoutes } from "./sidebar-routes";
 
@@ -15,11 +15,9 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
       <div className="flex flex-col w-full">
         <SidebarRoutes onClose={onClose} />
       </div>
-      <div className="flex items-end justify-start h-full w-full p-6">
-        <div className="flex items-center w-full">
-          <ProfileInfo />
-        </div>
-      </div>
+      {/* <div className="flex w-full">
+        <ProfileInfo />
+      </div> */}
     </div>
   );
 };
