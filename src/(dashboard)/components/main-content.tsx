@@ -5,7 +5,7 @@ import { SettingLayout } from "../setting/setting-layout";
 
 export const MainContent = () => {
   return (
-    <div>
+    <div className="h-full w-full md:px-6 px-4">
       <Routes>
         <Route path="/" element={<PortfolioLayout />} />
         <Route path="/activity" element={<ActivityLayout />} />

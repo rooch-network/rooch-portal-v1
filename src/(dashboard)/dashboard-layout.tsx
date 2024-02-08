@@ -11,7 +11,7 @@ export const DashboardLayout = () => {
       <div className="hidden md:flex h-full w-56 flex-col fixed inset-y-0 z-50">
         <Sidebar onClose={() => {}} />
       </div>
-      <main className="md:pl-56 pt-[64px] h-full">
+      <main className="md:pl-56 mt-[64px] h-full w-full overflow-y-auto">
         <MainContent />
       </main>
     </div>

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -31,31 +32,27 @@ export const SidebarItem = ({
   };
 
   return (
-    <button
+    <Button
       onClick={onClick}
       type="button"
+      variant="ghost"
+      size="lg"
       className={cn(
-        "flex items-center gap-x-2 text-zinc-500 dark:text-white text-sm font-[500] pl-6 transition-all hover:text-zinc-600 dark:hover:text-white hover:bg-zinc-300/20 dark:hover:bg-zinc-900",
+        "flex items-center justify-start text-zinc-500 dark:text-zinc-200 hover:dark-white text-sm font-[500] transition-all hover:text-zinc-600 dark:hover:text-white hover:bg-zinc-300/20 dark:hover:bg-zinc-800/50 px-2",
         isActive &&
-          "text-zinc-700 dark:text-white bg-zinc-200/20 dark:bg-zinc-900/80 hover:bg-zinc-200/20 dark:hover:bg-zinc-900/80 hover:text-zinc-700 dark:hover:text-white"
+          "text-zinc-700 dark:text-white bg-zinc-200/50 dark:bg-zinc-800/90 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/90 hover:text-zinc-700 dark:hover:text-white"
       )}
     >
-      <div className="flex items-center gap-x-2 py-4">
+      <div className="flex items-center gap-x-2 dark:hover:text-white">
         <Icon
           size={22}
           className={cn(
-            "text-zinc-500 dark:text-white",
+            "text-zinc-500 dark:text-zinc-200",
             isActive && "text-zinc-700 dark:text-white"
           )}
         />
         {label}
       </div>
-      <div
-        className={cn(
-          "ml-auto opacity-0 border-2 border-zinc-70 dark:border-zinc-800 h-full transition-all",
-          isActive && "opacity-100"
-        )}
-      />
-    </button>
+    </Button>
   );
 };

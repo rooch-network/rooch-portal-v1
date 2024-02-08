@@ -5,7 +5,7 @@ export const ProfileInfo = () => {
     <div className="h-[85px] w-full">
       <div className="flex items-center justify-center">
         <Avatar>
-          {/* TODO: add jazzicons */}
+          {/* TODO: add jazzicons as user profile */}
           <AvatarImage
             src="https://github.com/shadcn.png"
             alt="Rooch Network"
