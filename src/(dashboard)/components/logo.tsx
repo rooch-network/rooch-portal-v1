@@ -43,7 +43,7 @@ export const Logo = () => {
       src={logoSrc}
       alt="Logo"
       onClick={onClick}
-      className="cursor-pointer hover:opacity-75 transition md:h-[145px] md:w-[145px] h-[70px] w-[100px]"
+      className="cursor-pointer hover:opacity-75 transition md:h-[70px] md:w-[145px] h-[70px] w-[100px]"
     />
   );
 };
