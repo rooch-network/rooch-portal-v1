@@ -1,6 +1,6 @@
 import {
-  ArrowLeftRight,
   Bitcoin,
+  Compass,
   Layers,
   LayoutGrid,
   Scroll,
@@ -21,7 +21,7 @@ export const SidebarRoutes = ({ onClose }: SidebarRoutesProps) => {
     { icon: Scroll, label: t("Sidebar.mint"), href: "/mint" },
     { icon: LayoutGrid, label: t("Sidebar.apps"), href: "/apps" },
     {
-      icon: ArrowLeftRight,
+      icon: Compass,
       label: t("Sidebar.transactions"),
       href: "/transactions",
     },
