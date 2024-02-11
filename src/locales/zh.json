@@ -1,6 +1,9 @@
 {
   "Sidebar": {
     "assets": "投资组合",
+    "staking": "质押",
+    "mint": "铸造",
+    "apps": "应用",
     "transactions": "交易",
     "settings": "设置"
   },

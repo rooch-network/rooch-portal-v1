@@ -1,6 +1,9 @@
 {
   "Sidebar": {
     "assets": "Assets",
+    "staking": "Staking",
+    "mint": "Mint",
+    "apps": "Apps",
     "transactions": "Transactions",
     "settings": "Settings"
   },
