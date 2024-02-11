@@ -1,9 +1,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Button } from "./ui/button";
 
 export const ProfileInfo = () => {
   return (
-    <div className="h-[85px] w-full">
-      <div className="flex items-center justify-center">
+    <Button
+      variant="ghost"
+      size="sm"
+      className="h-[55px] w-full cursor-pointer rounded-full flex items-center justify-start"
+    >
+      <div className="flex items-center justify-start gap-x-3">
         <Avatar>
           {/* TODO: add jazzicons as user profile */}
           <AvatarImage
@@ -12,7 +17,13 @@ export const ProfileInfo = () => {
           />
           <AvatarFallback>RH</AvatarFallback>
         </Avatar>
+        <div className="h-full w-full flex flex-col items-start justify-center">
+          <h3 className="font-semibold text-zinc-500 dark:text-zinc-300">
+            Logic
+          </h3>
+          <p className="text-zinc-400 dark:text-zinc-500">bc1qw407...0x</p>
+        </div>
       </div>
-    </div>
+    </Button>
   );
 };

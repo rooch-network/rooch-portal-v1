@@ -1,8 +1,11 @@
 {
   "Sidebar": {
-    "portfolio": "投资组合",
-    "activity": "活动",
-    "setting": "设置"
+    "assets": "投资组合",
+    "staking": "质押",
+    "mint": "铸造",
+    "apps": "应用",
+    "transactions": "交易",
+    "settings": "设置"
   },
   "Theme": {
     "light": "浅色模式",

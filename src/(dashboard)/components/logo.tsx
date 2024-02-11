@@ -8,7 +8,7 @@ export const Logo = () => {
   const [logoSrc, setLogoSrc] = useState<string>("/rooch_black_combine.svg");
 
   const onClick = () => {
-    navigate("/dashboard/portfolio");
+    navigate("/");
   };
 
   useEffect(() => {

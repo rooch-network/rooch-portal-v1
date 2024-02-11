@@ -1,8 +1,11 @@
 {
   "Sidebar": {
-    "portfolio": "Portfolio",
-    "activity": "Activity",
-    "setting": "Setting"
+    "assets": "Assets",
+    "staking": "Staking",
+    "mint": "Mint",
+    "apps": "Apps",
+    "transactions": "Transactions",
+    "settings": "Settings"
   },
   "Theme": {
     "light": "Light",

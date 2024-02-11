@@ -15,7 +15,7 @@ export const Sidebar = ({ onClose }: SidebarProps) => {
       <div className="flex flex-col w-full px-4">
         <SidebarRoutes onClose={onClose} />
       </div>
-      <div className="flex w-full mt-auto">
+      <div className="flex w-full mt-auto p-4">
         <ProfileInfo />
       </div>
     </div>
