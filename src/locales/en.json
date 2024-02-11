@@ -1,8 +1,8 @@
 {
   "Sidebar": {
-    "portfolio": "Portfolio",
-    "activity": "Activity",
-    "setting": "Setting"
+    "assets": "Assets",
+    "transactions": "Transactions",
+    "settings": "Settings"
   },
   "Theme": {
     "light": "Light",
