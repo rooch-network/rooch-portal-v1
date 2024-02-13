@@ -6,7 +6,7 @@ export const ProfileInfo = () => {
     <Button
       variant="ghost"
       size="sm"
-      className="h-[55px] w-full cursor-pointer rounded-full flex items-center justify-start transition-all ease-in-out"
+      className="h-[55px] w-full cursor-pointer flex items-center justify-start transition-all ease-in-out"
     >
       <div className="flex items-center justify-start gap-x-3">
         <Avatar>
@@ -18,7 +18,7 @@ export const ProfileInfo = () => {
           <AvatarFallback>RH</AvatarFallback>
         </Avatar>
         <div className="h-full w-full flex flex-col items-start justify-center">
-          <h3 className="font-semibold text-zinc-500 dark:text-zinc-300">
+          <h3 className="text-base font-semibold text-zinc-500 dark:text-zinc-300">
             Logic
           </h3>
           <p className="text-zinc-400 dark:text-zinc-500">bc1qw407...0x</p>

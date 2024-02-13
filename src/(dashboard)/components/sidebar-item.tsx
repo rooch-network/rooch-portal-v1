@@ -43,7 +43,7 @@ export const SidebarItem = ({
           "text-zinc-700 dark:text-white bg-zinc-200/50 dark:bg-zinc-800/90 hover:bg-zinc-200/50 dark:hover:bg-zinc-800/90 hover:text-zinc-700 dark:hover:text-white"
       )}
     >
-      <div className="flex items-center gap-x-3 text-sm dark:hover:text-white">
+      <div className="flex items-center gap-x-3 text-base dark:hover:text-white">
         <Icon
           size={22}
           className={cn(
