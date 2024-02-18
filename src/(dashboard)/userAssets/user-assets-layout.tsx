@@ -9,7 +9,9 @@ export const UserAssetsLayout = () => {
 
   async function getTasks() {
     try {
-      const response = await fetch("public/data/tasks.json");
+      const response = await fetch(
+        "https://rooch-portal-v1.vercel.app/data/tasks.json"
+      );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
