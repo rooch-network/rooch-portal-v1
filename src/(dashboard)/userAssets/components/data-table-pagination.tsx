@@ -1,4 +1,11 @@
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  DoubleArrowLeftIcon,
+  DoubleArrowRightIcon,
+} from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
+
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -7,19 +14,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
-} from "@radix-ui/react-icons";
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;
 }
 
-export const DataTablePagination = <TData,>({
+export function DataTablePagination<TData>({
   table,
-}: DataTablePaginationProps<TData>) => {
+}: DataTablePaginationProps<TData>) {
   return (
     <div className="flex items-center justify-between px-2">
       <div className="flex-1 text-sm text-muted-foreground">
@@ -92,4 +94,4 @@ export const DataTablePagination = <TData,>({
       </div>
     </div>
   );
-};
+}

@@ -1,5 +1,13 @@
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  CaretSortIcon,
+  EyeNoneIcon,
+} from "@radix-ui/react-icons";
 import { Column } from "@tanstack/react-table";
+
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,9 +15,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { ArrowDownIcon, ArrowUpIcon } from "lucide-react";
-import { CaretSortIcon, EyeNoneIcon } from "@radix-ui/react-icons";
 
 interface DataTableColumnHeaderProps<TData, TValue>
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -17,15 +22,13 @@ interface DataTableColumnHeaderProps<TData, TValue>
   title: string;
 }
 
-export const DataTableColumnHeader = <TData, TValue>({
+export function DataTableColumnHeader<TData, TValue>({
   column,
   title,
   className,
-}: DataTableColumnHeaderProps<TData, TValue>) => {
-  const columnHeader = title || column.id;
-
+}: DataTableColumnHeaderProps<TData, TValue>) {
   if (!column.getCanSort()) {
-    return <div className={cn(className)}>{columnHeader}</div>;
+    return <div className={cn(className)}>{title}</div>;
   }
 
   return (
@@ -65,4 +68,4 @@ export const DataTableColumnHeader = <TData, TValue>({
       </DropdownMenu>
     </div>
   );
-};
+}

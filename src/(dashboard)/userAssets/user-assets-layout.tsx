@@ -1,9 +1,34 @@
-import { DataTable } from "./components/data-table";
+import { z } from "zod";
+import { Task, taskSchema } from "./data/schema";
 import { columns } from "./components/columns";
-import getTasks from "@/lib/getTasks";
+import { DataTable } from "./components/data-table";
+import { useEffect, useState } from "react";
 
-export const UserAssetsLayout = async () => {
-  const tasks = await getTasks();
+export const UserAssetsLayout = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+
+  async function getTasks() {
+    try {
+      const response = await fetch(
+        "src/(dashboard)/userAssets/data/tasks.json"
+      );
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      return z.array(taskSchema).parse(data);
+    } catch (error) {
+      console.error("Failed to fetch tasks:", error);
+    }
+  }
+
+  useEffect(() => {
+    getTasks().then((data) => {
+      if (data) {
+        setTasks(data);
+      }
+    });
+  }, []);
 
   return (
     <div className="h-full flex-1 flex-col space-y-8 flex">

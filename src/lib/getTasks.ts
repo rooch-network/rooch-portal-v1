@@ -8,6 +8,7 @@ interface Task {
   title: string;
 }
 
+// TODO: Fix the client bug
 async function getTasks(): Promise<Task[]> {
   const data = await fs.readFile(
     path.join(process.cwd(), "@/(dashboard)/userAssets/data/tasks.json")
