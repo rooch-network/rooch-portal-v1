@@ -41,7 +41,7 @@ const coins = [
     value: "$0.99",
   },
   {
-    coin: "Ethereum",
+    coin: "ETH",
     balance: 10.99,
     value: "$2,800.00",
   },
