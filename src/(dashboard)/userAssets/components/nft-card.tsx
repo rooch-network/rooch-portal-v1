@@ -12,7 +12,7 @@ import {
 export const NftCard = () => {
   return (
     <>
-      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-md overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
