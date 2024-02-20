@@ -13,6 +13,8 @@
     "system": "System"
   },
   "WalletConnect": {
-    "connectWallet": "Connect Wallet"
+    "connectWallet": "Connect Wallet",
+    "connectWalletOnMobile": "Connect",
+    "connectWalletTip": "Connect to your Rooch wallet"
   }
 }

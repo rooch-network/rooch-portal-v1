@@ -8,7 +8,7 @@ import { UserAppsLayout } from "../userApps/user-apps-layout";
 
 export const MainContent = () => {
   return (
-    <div className="h-full w-full p-6">
+    <div className="h-full w-full p-4 md:p-6">
       <Routes>
         <Route path="/" element={<UserAssetsLayout />} />
         <Route path="/staking" element={<UserSelfStaking />} />
