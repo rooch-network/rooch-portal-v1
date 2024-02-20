@@ -5,18 +5,21 @@ import { UserTransactionsLayout } from "../userTransactions/user-transactions-la
 import { UserSelfStaking } from "../userSelfStaking/user-self-staking";
 import { UserMintLayout } from "../userMint/user-mint-layout";
 import { UserAppsLayout } from "../userApps/user-apps-layout";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export const MainContent = () => {
   return (
-    <div className="h-full w-full p-4 md:p-6">
-      <Routes>
-        <Route path="/" element={<UserAssetsLayout />} />
-        <Route path="/staking" element={<UserSelfStaking />} />
-        <Route path="/mint" element={<UserMintLayout />} />
-        <Route path="/apps" element={<UserAppsLayout />} />
-        <Route path="/transactions" element={<UserTransactionsLayout />} />
-        <Route path="/settings" element={<UserSettingLayout />} />
-      </Routes>
-    </div>
+    <ScrollArea className="w-full whitespace-nowrap">
+      <div className="h-full w-full p-4 md:p-6">
+        <Routes>
+          <Route path="/" element={<UserAssetsLayout />} />
+          <Route path="/staking" element={<UserSelfStaking />} />
+          <Route path="/mint" element={<UserMintLayout />} />
+          <Route path="/apps" element={<UserAppsLayout />} />
+          <Route path="/transactions" element={<UserTransactionsLayout />} />
+          <Route path="/settings" element={<UserSettingLayout />} />
+        </Routes>
+      </div>
+    </ScrollArea>
   );
 };
