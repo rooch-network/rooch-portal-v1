@@ -4,7 +4,7 @@ import zhTranslation from "../locales/zh.json";
 import enTranslation from "../locales/en.json";
 
 i18n.use(initReactI18next).init({
-  debug: true,
+  debug: false,
   resources: {
     en: { translation: enTranslation },
     zh: { translation: zhTranslation },

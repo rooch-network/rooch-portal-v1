@@ -13,6 +13,8 @@
     "system": "跟随系统"
   },
   "WalletConnect": {
-    "connectWallet": "连接钱包"
+    "connectWallet": "连接钱包",
+    "connectWalletOnMobile": "连接钱包",
+    "connectWalletTip": "连接您的 Rooch 钱包"
   }
 }

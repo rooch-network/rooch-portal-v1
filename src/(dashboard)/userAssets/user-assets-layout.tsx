@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AssetsTable } from "./components/assetsTable";
 
 export const UserAssetsLayout = () => {
   return (
@@ -11,17 +11,8 @@ export const UserAssetsLayout = () => {
           </p>
         </span>
       </div>
-      {/* Tables */}
-      <Tabs defaultValue="coin" className="w-[450px]">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="coin">Coin</TabsTrigger>
-          <TabsTrigger value="nft">NFT</TabsTrigger>
-          <TabsTrigger value="sft">SFT</TabsTrigger>
-        </TabsList>
-        <TabsContent value="coin">coin</TabsContent>
-        <TabsContent value="nft">nft</TabsContent>
-        <TabsContent value="sft">sft</TabsContent>
-      </Tabs>
+      {/* Assets Table */}
+      <AssetsTable />
     </div>
   );
 };
