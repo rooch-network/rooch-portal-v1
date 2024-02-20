@@ -8,7 +8,29 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import {
+  GripHorizontalIcon,
+  GripVertical,
+  GripVerticalIcon,
+} from "lucide-react";
 
 const coins = [
   {
@@ -61,7 +83,37 @@ export const AssetsTable = () => {
                   <TableCell className="font-medium">{coin.coin}</TableCell>
                   <TableCell>{coin.balance}</TableCell>
                   <TableCell>{coin.value}</TableCell>
-                  <TableCell className="text-right">Transfer</TableCell>
+                  <TableCell className="text-right">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          className="hover:rounded-lg"
+                        >
+                          <GripVerticalIcon className="w-5 h-5" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="w-56">
+                        <DropdownMenuLabel>Action 💥</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuGroup>
+                          <DropdownMenuItem onClick={() => {}}>
+                            Transfer
+                            <DropdownMenuShortcut>⇧⌘F</DropdownMenuShortcut>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => {}}>
+                            Buy & Sell
+                            <DropdownMenuShortcut>⇧⌘B</DropdownMenuShortcut>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem onClick={() => {}}>
+                            Swap
+                            <DropdownMenuShortcut>⇧⌘S</DropdownMenuShortcut>
+                          </DropdownMenuItem>
+                        </DropdownMenuGroup>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
