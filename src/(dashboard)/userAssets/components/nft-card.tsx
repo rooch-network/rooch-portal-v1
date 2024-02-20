@@ -12,7 +12,7 @@ import {
 export const NftCard = () => {
   return (
     <>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -33,7 +33,7 @@ export const NftCard = () => {
           <Button className="w-full">Transfer</Button>
         </CardFooter>
       </Card>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -54,7 +54,7 @@ export const NftCard = () => {
           <Button className="w-full">Transfer</Button>
         </CardFooter>
       </Card>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -75,7 +75,7 @@ export const NftCard = () => {
           <Button className="w-full">Transfer</Button>
         </CardFooter>
       </Card>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -97,7 +97,7 @@ export const NftCard = () => {
         </CardFooter>
       </Card>
 
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -118,7 +118,7 @@ export const NftCard = () => {
           <Button className="w-full">Transfer</Button>
         </CardFooter>
       </Card>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -139,7 +139,7 @@ export const NftCard = () => {
           <Button className="w-full">Transfer</Button>
         </CardFooter>
       </Card>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
@@ -160,7 +160,7 @@ export const NftCard = () => {
           <Button className="w-full">Transfer</Button>
         </CardFooter>
       </Card>
-      <Card className="w-full">
+      <Card className="w-full transition-all dark:hover:border-primary/70 hover:shadow-lg overflow-hidden">
         <CardContent className="p-0">
           <AspectRatio
             ratio={1 / 1}
