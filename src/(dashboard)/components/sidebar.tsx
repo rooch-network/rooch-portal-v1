@@ -8,7 +8,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ onClose }: SidebarProps) => {
   return (
-    <div className="h-full flex flex-col overflow-y-auto dark:bg-inherit border-r shadow-sm">
+    <div className="h-full flex flex-col overflow-y-auto dark:bg-inherit border-r shadow-sm bg-background">
       <div className="h-[85px] flex items-center justify-start px-6 py-12">
         <Logo />
       </div>
