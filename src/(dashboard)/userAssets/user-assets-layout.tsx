@@ -1,4 +1,4 @@
-import { AssetsTable } from "./components/assetsTable";
+import { AssetsTabs } from "./components/assets-tabs";
 
 export const UserAssetsLayout = () => {
   return (
@@ -12,7 +12,7 @@ export const UserAssetsLayout = () => {
         </span>
       </div>
       {/* Assets Table */}
-      <AssetsTable />
+      <AssetsTabs />
     </div>
   );
 };
