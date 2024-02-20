@@ -1,35 +1,6 @@
-import { z } from "zod";
-import { Task, taskSchema } from "./data/schema";
-import { columns } from "./components/columns";
-import { DataTable } from "./components/data-table";
-import { useEffect, useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const UserAssetsLayout = () => {
-  const [tasks, setTasks] = useState<Task[]>([]);
-
-  async function getTasks() {
-    try {
-      const response = await fetch(
-        "https://rooch-portal-v1.vercel.app/data/tasks.json"
-      );
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      return z.array(taskSchema).parse(data);
-    } catch (error) {
-      console.error("Failed to fetch tasks:", error);
-    }
-  }
-
-  useEffect(() => {
-    getTasks().then((data) => {
-      if (data) {
-        setTasks(data);
-      }
-    });
-  }, []);
-
   return (
     <div className="h-full flex-1 flex-col space-y-8 flex">
       <div className="flex items-center justify-between space-y-2">
@@ -39,9 +10,18 @@ export const UserAssetsLayout = () => {
             Supported Cryptocurrencies for Transfer
           </p>
         </span>
-        {/* add some details on the right of */}
       </div>
-      <DataTable data={tasks} columns={columns} />
+      {/* Tables */}
+      <Tabs defaultValue="coin" className="w-[450px]">
+        <TabsList className="grid w-full grid-cols-3">
+          <TabsTrigger value="coin">Coin</TabsTrigger>
+          <TabsTrigger value="nft">NFT</TabsTrigger>
+          <TabsTrigger value="sft">SFT</TabsTrigger>
+        </TabsList>
+        <TabsContent value="coin">coin</TabsContent>
+        <TabsContent value="nft">nft</TabsContent>
+        <TabsContent value="sft">sft</TabsContent>
+      </Tabs>
     </div>
   );
 };
