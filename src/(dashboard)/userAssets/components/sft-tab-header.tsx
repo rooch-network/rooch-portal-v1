@@ -24,20 +24,20 @@ const sfts = [
     label: "Rooch",
   },
   {
-    value: "sveltekit",
-    label: "SvelteKit",
+    value: "rOrdi",
+    label: "ROrdi",
   },
   {
-    value: "nuxt.js",
-    label: "Nuxt.js",
+    value: "rStrk",
+    label: "RStrk",
   },
   {
-    value: "remix",
-    label: "Remix",
+    value: "rXai",
+    label: "RXai",
   },
   {
-    value: "astro",
-    label: "Astro",
+    value: "rSui",
+    label: "RSui",
   },
 ];
 
