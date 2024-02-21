@@ -8,6 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { X } from "lucide-react";
+import { useState } from "react";
 
 export const NftCard = () => {
   const nftData = [
@@ -69,6 +71,22 @@ export const NftCard = () => {
     },
   ];
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const handleImageClick = (imageUrl: string) => {
+    setSelectedImage(imageUrl);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    if (event.target === event.currentTarget) {
+      setModalOpen(false);
+    }
+  };
+
   return (
     <>
       {nftData.map((nft) => (
@@ -79,12 +97,13 @@ export const NftCard = () => {
           <CardContent className="p-0">
             <AspectRatio
               ratio={1 / 1}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center overflow-hidden cursor-pointer"
             >
               <img
                 src={nft.imageUrl}
+                onClick={() => handleImageClick(nft.imageUrl)}
                 alt="NFT Image"
-                className="rounded-md object-cover"
+                className="rounded-md object-cover hover:scale-110 transition-all ease-in-out duration-300"
               />
             </AspectRatio>
           </CardContent>
@@ -97,6 +116,23 @@ export const NftCard = () => {
           </CardFooter>
         </Card>
       ))}
+
+      {modalOpen && (
+        <div
+          onClick={handleCloseModal}
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+        >
+          <div className="bg-white rounded-lg flex flex-col items-start justify-center">
+            <div className="p-4">
+              <img
+                src={selectedImage}
+                alt="Selected NFT"
+                className="w-[360px] h-auto md:w-[640px] rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
