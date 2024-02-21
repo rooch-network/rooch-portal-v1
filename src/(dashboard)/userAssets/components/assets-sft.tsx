@@ -1,6 +1,3 @@
-import { SftCard } from "./sft-card";
-import { SftTabHeader } from "./sft-tab-header";
-
 export const AssetsSft = () => {
   return (
     <>
