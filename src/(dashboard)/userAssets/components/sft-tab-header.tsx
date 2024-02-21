@@ -51,7 +51,7 @@ export const SftTabHeader = () => {
           role="combobox"
           size="sm"
           aria-expanded={open}
-          className="w-full md:w-[150px] justify-between rounded-lg font-semibold md:font-bold text-base"
+          className="w-full md:w-[150px] justify-between rounded-lg font-semibold md:font-bold md:text-base"
         >
           {value
             ? sfts.find((sft) => sft.value === value)?.label
