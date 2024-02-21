@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { X } from "lucide-react";
 import { useState } from "react";
 
 export const NftCard = () => {
