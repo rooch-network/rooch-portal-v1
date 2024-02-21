@@ -13,7 +13,7 @@ export const SftCard = () => {
 
   return (
     <>
-      {cards.map((card, index) => (
+      {cards.map((index) => (
         <Card
           key={index}
           className="w-full transition-all dark:hover:border-primary/70 hover:shadow-md overflow-hidden"

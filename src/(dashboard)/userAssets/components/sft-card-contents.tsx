@@ -10,7 +10,9 @@ export const SftCardContents = () => {
           <p>Locked ROOCH:</p>
         </div>
         <div className="flex items-center justify-center">
-          <p className="dark:text-amber-300 text-amber-500">3.1888</p>
+          <p className="dark:text-amber-300 text-amber-500 font-semibold">
+            3.1888
+          </p>
           <BitcoinIcon className="w-4 h-4 dark:text-amber-500 text-amber-600" />
         </div>
       </div>
