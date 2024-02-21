@@ -2,6 +2,8 @@ import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import {
   Command,
   CommandEmpty,
@@ -42,49 +44,66 @@ const sfts = [
 export const SftTabHeader = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+  const [isSwitchOn, setIsSwitchOn] = useState(false);
+
+  const handleSwitchChange = (checked: boolean) => {
+    setIsSwitchOn(checked);
+    console.log(`Batch Mode ${checked ? "On" : "Off"}`);
+  };
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="ghost"
-          role="combobox"
-          size="sm"
-          aria-expanded={open}
-          className="w-full md:w-[150px] justify-between rounded-lg font-semibold md:font-bold md:text-base"
-        >
-          {value
-            ? sfts.find((sft) => sft.value === value)?.label
-            : "Select SFTs..."}
-          <CaretSortIcon className="ml-2 h-4 w-4 shrink-0" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="md:w-[150px] p-0">
-        <Command>
-          <CommandInput placeholder="Search SFT..." className="h-9" />
-          <CommandEmpty>No SFT found.</CommandEmpty>
-          <CommandGroup>
-            {sfts.map((sft) => (
-              <CommandItem
-                key={sft.value}
-                value={sft.value}
-                onSelect={(currentValue) => {
-                  setValue(currentValue === value ? "" : currentValue);
-                  setOpen(false);
-                }}
-              >
-                {sft.label}
-                <CheckIcon
-                  className={cn(
-                    "ml-auto h-4 w-4",
-                    value === sft.value ? "opacity-100" : "opacity-0"
-                  )}
-                />
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        </Command>
-      </PopoverContent>
-    </Popover>
+    <div className="flex items-center justify-start gap-x-3">
+      <Popover open={open} onOpenChange={setOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            variant="ghost"
+            role="combobox"
+            size="sm"
+            aria-expanded={open}
+            className="w-full md:w-[150px] justify-between rounded-lg"
+          >
+            {value
+              ? sfts.find((sft) => sft.value === value)?.label
+              : "Select SFTs..."}
+            <CaretSortIcon className="ml-2 h-4 w-4 shrink-0" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="md:w-[150px] p-0">
+          <Command>
+            <CommandInput placeholder="Search SFT..." className="h-9" />
+            <CommandEmpty>No SFT found.</CommandEmpty>
+            <CommandGroup>
+              {sfts.map((sft) => (
+                <CommandItem
+                  key={sft.value}
+                  value={sft.value}
+                  onSelect={(currentValue) => {
+                    setValue(currentValue === value ? "" : currentValue);
+                    setOpen(false);
+                  }}
+                >
+                  {sft.label}
+                  <CheckIcon
+                    className={cn(
+                      "ml-auto h-4 w-4",
+                      value === sft.value ? "opacity-100" : "opacity-0"
+                    )}
+                  />
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </Command>
+        </PopoverContent>
+      </Popover>
+      <div className="flex items-center space-x-2">
+        <Switch
+          id="batch-mode"
+          checked={isSwitchOn}
+          onCheckedChange={handleSwitchChange}
+          className="data-[state=checked]:bg-teal-600 dark:data-[state=checked]:bg-teal-400"
+        />
+        <Label htmlFor="batch-mode">Batch Mode</Label>
+      </div>
+    </div>
   );
 };
