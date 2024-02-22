@@ -6,7 +6,7 @@ export const UserAssetsLayout = () => {
       <div className="flex items-center justify-between space-y-2">
         <span>
           <h1 className="text-3xl font-bold tracking-tight">Assets</h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-wrap">
             Supported Cryptocurrencies for Transfer
           </p>
         </span>
