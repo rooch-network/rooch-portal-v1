@@ -126,7 +126,7 @@ export const NftCard = () => {
               <img
                 src={selectedImage}
                 alt="Selected NFT"
-                className="w-[360px] h-auto md:w-[640px] rounded-lg"
+                className="w-[480px] h-auto md:w-[640px] rounded-lg"
               />
             </div>
           </div>
