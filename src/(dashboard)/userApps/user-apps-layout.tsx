@@ -9,6 +9,7 @@ const mockApps = [
       "https://cdn.lxdao.io/bafkreig3psglqxqiejrcokqwcoucbv4i2nkp4rumqawok2vjvhey5ps63i.png",
     logoUrl:
       "https://cdn.lxdao.io/bafybeibietdc7lxki2jeggdu5namnyisuujhgej2zsq26nn7orn2cngm6y.png",
+    type: "Tag",
   },
   {
     id: 2,
@@ -18,6 +19,47 @@ const mockApps = [
       "https://cdn.lxdao.io/bafkreib5gpyab5fipyk7mvs3sbbcophl2gwpldoal3mt7hwzxgbu6pdjpq.png",
     logoUrl:
       "https://cdn.lxdao.io/bafkreifmpi4vszs4zqvm25us2omgpfr6gkxmc7cwvmle6xph6d5axsm4jm.png",
+    type: "Bridge",
+  },
+  {
+    id: 3,
+    name: "App One",
+    description: "Description for App One.",
+    profileUrl:
+      "https://cdn.lxdao.io/bafkreig3psglqxqiejrcokqwcoucbv4i2nkp4rumqawok2vjvhey5ps63i.png",
+    logoUrl:
+      "https://cdn.lxdao.io/bafybeibietdc7lxki2jeggdu5namnyisuujhgej2zsq26nn7orn2cngm6y.png",
+    type: "Game",
+  },
+  {
+    id: 1,
+    name: "App One",
+    description: "Description for App One.",
+    profileUrl:
+      "https://cdn.lxdao.io/bafkreig3psglqxqiejrcokqwcoucbv4i2nkp4rumqawok2vjvhey5ps63i.png",
+    logoUrl:
+      "https://cdn.lxdao.io/bafybeibietdc7lxki2jeggdu5namnyisuujhgej2zsq26nn7orn2cngm6y.png",
+    type: "Tag",
+  },
+  {
+    id: 2,
+    name: "App Two",
+    description: "Description for App Two.",
+    profileUrl:
+      "https://cdn.lxdao.io/bafkreib5gpyab5fipyk7mvs3sbbcophl2gwpldoal3mt7hwzxgbu6pdjpq.png",
+    logoUrl:
+      "https://cdn.lxdao.io/bafkreifmpi4vszs4zqvm25us2omgpfr6gkxmc7cwvmle6xph6d5axsm4jm.png",
+    type: "Bridge",
+  },
+  {
+    id: 3,
+    name: "App One",
+    description: "Description for App One.",
+    profileUrl:
+      "https://cdn.lxdao.io/bafkreig3psglqxqiejrcokqwcoucbv4i2nkp4rumqawok2vjvhey5ps63i.png",
+    logoUrl:
+      "https://cdn.lxdao.io/bafybeibietdc7lxki2jeggdu5namnyisuujhgej2zsq26nn7orn2cngm6y.png",
+    type: "Game",
   },
 ];
 
@@ -34,7 +76,7 @@ export const UserAppsLayout = () => {
         </span>
       </div>
       {/* UserAppItem */}
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full place-items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full md:w-fit gap-4 md:gap-6 place-items-start">
         {mockApps.map((app) => (
           <UserAppItem
             key={app.id}
@@ -43,6 +85,7 @@ export const UserAppsLayout = () => {
             description={app.description}
             profileUrl={app.profileUrl}
             logoUrl={app.logoUrl}
+            type={app.type}
           />
         ))}
       </div>
