@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -7,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Copy, RotateCcw } from "lucide-react";
 
 export const UserSettingsLayout = () => {
   return (
@@ -18,18 +20,33 @@ export const UserSettingsLayout = () => {
               <CardTitle className="text-2xl md:text-3xl leading-tight text-white">
                 Rooch Account
               </CardTitle>
-              <CardDescription className="text-wrap text-white/85 dark:text-white/70 text-xs md:text-sm">
+              <CardDescription className="text-wrap text-white/95 dark:text-white/70 text-xs md:text-sm">
                 Manage Your Wallet Connections and Authorized Sessions.
               </CardDescription>
             </div>
-            <div className="ml-2">
-              <span>Your balance</span>
+            <div className="ml-4 flex flex-col items-end justify-start text-sm md:text-base">
+              <span className="mt-1.5 text-white/95 dark:text-white/85 leading-3">
+                Your balance
+              </span>
+              <span className="text-2xl md:text-3xl font-semibold text-white">
+                $0.00
+              </span>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full h-8 w-8 hover:bg-transparent/15 transition-all"
+              >
+                <RotateCcw className="w-4 h-4 text-white" />
+              </Button>
             </div>
           </div>
         </CardHeader>
         <CardContent className="p-0">
           <div>
-            <div className="bg-gradient-to-r from-sky-500 to-indigo-500 object-cover w-full h-28 md:h-32 opacity-80 select-none" />
+            <div
+              className="bg-gradient-to-r from-amber-500
+to-teal-500 dark:from-amber-600 dark:to-teal-600 object-cover w-full h-28 md:h-32 opacity-80 select-none"
+            />
           </div>
         </CardContent>
         <CardFooter className="flex justify-between relative pb-8 md:pb-14 px-4 md:px-6 dark:bg-zinc-800/90 h-full">
@@ -38,6 +55,18 @@ export const UserSettingsLayout = () => {
               <AvatarImage src="https://github.com/shadcn.png" alt="Logic" />
               <AvatarFallback className="text-xl">LO</AvatarFallback>
             </Avatar>
+          </div>
+          <div className="absolute top-0 right-4 md:top-2 md:right-6">
+            <div className="flex items-center justify-center gap-1 text-sm text-zinc-800/85">
+              <span>BC1PR6MD...J5</span>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full h-8 w-8 hover:bg-transparent/15 transition-all"
+              >
+                <Copy className="w-4 h-4" />
+              </Button>
+            </div>
           </div>
         </CardFooter>
       </Card>
