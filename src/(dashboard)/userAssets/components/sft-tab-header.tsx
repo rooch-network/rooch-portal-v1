@@ -48,7 +48,6 @@ export const SftTabHeader = () => {
 
   const handleSwitchChange = (checked: boolean) => {
     setIsSwitchOn(checked);
-    console.log(`Batch Mode ${checked ? "On" : "Off"}`);
   };
 
   return (
