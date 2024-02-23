@@ -91,7 +91,7 @@ export const NftCard = () => {
       {nftData.map((nft) => (
         <Card
           key={nft.id}
-          className="w-full transition-all dark:bg-zinc-800/90 dark:hover:border-primary/70 hover:shadow-md overflow-hidden"
+          className="w-full transition-all border-border/40 dark:bg-zinc-800/90 dark:hover:border-primary/20 hover:shadow-md overflow-hidden"
         >
           <CardContent className="p-0">
             <AspectRatio

@@ -46,7 +46,7 @@ export const UserAppItem = ({
               <CardTitle>{name}</CardTitle>
               <Badge
                 variant="outline"
-                className="rounded-lg border-teal-500 text-teal-500 dark:border-teal-300 dark:text-teal-300 hover:bg-teal-500/10"
+                className="rounded-full border-teal-500 text-teal-500 dark:border-teal-300 dark:text-teal-300 hover:bg-teal-500/10"
               >
                 {type}
               </Badge>

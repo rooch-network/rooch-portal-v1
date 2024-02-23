@@ -32,7 +32,7 @@ const mockApps = [
     type: "Game",
   },
   {
-    id: 1,
+    id: 4,
     name: "App One",
     description: "Description for App One.",
     profileUrl:
@@ -42,7 +42,7 @@ const mockApps = [
     type: "Tag",
   },
   {
-    id: 2,
+    id: 5,
     name: "App Two",
     description: "Description for App Two.",
     profileUrl:
@@ -52,7 +52,7 @@ const mockApps = [
     type: "Bridge",
   },
   {
-    id: 3,
+    id: 6,
     name: "App One",
     description: "Description for App One.",
     profileUrl:
