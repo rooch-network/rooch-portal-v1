@@ -24,20 +24,20 @@ const sfts = [
     label: "Rooch",
   },
   {
-    value: "rOrdi",
+    value: "rordi",
     label: "ROrdi",
   },
   {
-    value: "rStrk",
-    label: "RStrk",
-  },
-  {
-    value: "rXai",
+    value: "rxai",
     label: "RXai",
   },
   {
-    value: "rSui",
-    label: "RSui",
+    value: "rstrk",
+    label: "RStrk",
+  },
+  {
+    value: "rdoge",
+    label: "RDoge",
   },
 ];
 
@@ -58,17 +58,17 @@ export const SftTabHeader = () => {
           <Button
             variant="ghost"
             role="combobox"
-            size="sm"
             aria-expanded={open}
-            className="w-full md:w-[150px] justify-between rounded-lg"
+            size="sm"
+            className="w-full md:w-[150px] justify-between"
           >
             {value
               ? sfts.find((sft) => sft.value === value)?.label
-              : "Select SFTs..."}
-            <CaretSortIcon className="ml-2 h-4 w-4 shrink-0" />
+              : "Select sft..."}
+            <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="md:w-[150px] p-0">
+        <PopoverContent className="w-max md:w-[150px] p-0">
           <Command>
             <CommandInput placeholder="Search SFT..." className="h-9" />
             <CommandEmpty>No SFT found.</CommandEmpty>
