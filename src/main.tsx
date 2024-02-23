@@ -9,6 +9,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import ErrorPage from "./components/error-page.tsx";
+import { UserSettingsLayout } from "./(dashboard)/userSettings/user-settings-layout.tsx";
+import { UserAppsLayout } from "./(dashboard)/userApps/user-apps-layout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +21,9 @@ const router = createBrowserRouter([
       { path: "/", element: <App /> },
       { path: "/staking", element: <App /> },
       { path: "/mint", element: <App /> },
-      { path: "/apps", element: <App /> },
+      { path: "/apps", element: <UserAppsLayout /> },
       { path: "/transactions", element: <App /> },
-      { path: "/settings", element: <App /> },
+      { path: "/settings", element: <UserSettingsLayout /> },
     ],
   },
   {
