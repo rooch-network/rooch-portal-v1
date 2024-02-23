@@ -57,7 +57,7 @@ to-teal-500 dark:from-amber-600 dark:to-teal-600 object-cover w-full h-28 md:h-3
             </Avatar>
           </div>
           <div className="absolute top-0 right-4 md:top-2 md:right-6">
-            <div className="flex items-center justify-center gap-1 text-sm text-zinc-800/85">
+            <div className="flex items-center justify-center gap-1 text-sm text-zinc-800/85 dark:text-white/85">
               <span>BC1PR6MD...J5</span>
               <Button
                 variant="ghost"
