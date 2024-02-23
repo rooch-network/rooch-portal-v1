@@ -16,7 +16,7 @@ export const SftCard = () => {
       {cards.map((index) => (
         <Card
           key={index}
-          className="w-full transition-all dark:bg-zinc-800/90 dark:hover:border-primary/70 hover:shadow-md overflow-hidden"
+          className="w-full transition-all border-border/40 dark:bg-zinc-800/90 dark:hover:border-primary/20 hover:shadow-md overflow-hidden"
         >
           <CardHeader className="py-4 px-2 md:px-4">
             <SftCardHeaders />

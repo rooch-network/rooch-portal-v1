@@ -9,7 +9,6 @@ export const UserSettingsLayout = () => {
           </p>
         </span>
       </div>
-      {/* UserAppItem */}
     </div>
   );
 };
