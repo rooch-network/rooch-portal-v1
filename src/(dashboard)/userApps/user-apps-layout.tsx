@@ -76,7 +76,7 @@ export const UserAppsLayout = () => {
         </span>
       </div>
       {/* UserAppItem */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full md:w-fit gap-4 md:gap-6 place-items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full place-items-center">
         {mockApps.map((app) => (
           <UserAppItem
             key={app.id}

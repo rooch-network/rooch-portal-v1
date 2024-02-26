@@ -25,7 +25,7 @@ const networks = [
 
 export const ConnectedAccountTable = () => {
   return (
-    <div className="rounded-lg border overflow-hidden">
+    <div className="rounded-lg border w-full">
       <Table>
         <TableCaption className="text-left pl-2 mb-2">
           Switch between networks with ease.
