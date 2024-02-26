@@ -4,12 +4,13 @@ import { UserTransactionsLayout } from "../userTransactions/user-transactions-la
 import { UserSelfStaking } from "../userSelfStaking/user-self-staking";
 import { UserMintLayout } from "../userMint/user-mint-layout";
 import { UserAppsLayout } from "../userApps/user-apps-layout";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { UserSettingsLayout } from "../userSettings/user-settings-layout";
 
 export const MainContent = () => {
   return (
     <ScrollArea className="w-full whitespace-nowrap">
+      <ScrollBar orientation="horizontal" />
       <div className="h-full w-full p-4 md:p-6">
         <Routes>
           <Route path="/" element={<UserAssetsLayout />} />

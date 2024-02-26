@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -17,11 +16,11 @@ export const ProfileCard = () => {
         <div className="flex items-start justify-between">
           <div>
             <CardTitle className="text-2xl md:text-3xl leading-tight text-white">
-              Rooch Account
+              Rooch Account #1
             </CardTitle>
-            <CardDescription className="text-wrap text-white/95 dark:text-white/70 text-xs md:text-sm">
+            {/* <CardDescription className="text-wrap text-white/95 dark:text-white/70 text-xs md:text-sm">
               Manage Your Wallet Connections and Authorized Sessions.
-            </CardDescription>
+            </CardDescription> */}
           </div>
           <div className="ml-4 flex flex-col items-end justify-start text-sm md:text-base">
             <span className="mt-1.5 text-white/95 dark:text-white/85 leading-3">

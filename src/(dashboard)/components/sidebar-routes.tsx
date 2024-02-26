@@ -29,7 +29,7 @@ export const SidebarRoutes = ({ onClose }: SidebarRoutesProps) => {
   ];
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full space-y-1">
       {routes.map((route) => (
         <SidebarItem
           key={route.href}

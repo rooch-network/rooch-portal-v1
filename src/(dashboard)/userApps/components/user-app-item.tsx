@@ -1,3 +1,4 @@
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -31,7 +32,7 @@ export const UserAppItem = ({
   return (
     <Card
       key={id}
-      className="h-full w-full md:w-[360px] transition-all dark:bg-zinc-800/90 dark:hover:border-primary/70 hover:shadow-md overflow-hidden"
+      className="h-full w-full transition-all dark:bg-zinc-800/90 dark:hover:border-primary/70 hover:shadow-md overflow-hidden"
     >
       <CardHeader className="p-4">
         <div className="flex items-center justify-start gap-x-3">
@@ -57,11 +58,16 @@ export const UserAppItem = ({
       </CardHeader>
       <CardContent className="p-0">
         <div className="mx-4 border rounded-lg overflow-hidden">
-          <img
-            src={logoUrl}
-            alt="NFT Image"
-            className="rounded-md object-cover transition-all"
-          />
+          <AspectRatio
+            ratio={16 / 9}
+            className="flex items-center justify-center overflow-hidden cursor-pointer"
+          >
+            <img
+              src={logoUrl}
+              alt="NFT Image"
+              className="rounded-md object-cover transition-all"
+            />
+          </AspectRatio>
         </div>
       </CardContent>
       <CardFooter className="p-4">
