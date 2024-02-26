@@ -1,4 +1,14 @@
-import { ConnectedAccountTable } from "./components/connected-account-table";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Copy, RotateCcw } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export const UserSettingsLayout = () => {
   return (
