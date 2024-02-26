@@ -12,7 +12,7 @@ import { Copy, RotateCcw } from "lucide-react";
 
 export const ProfileCard = () => {
   return (
-    <Card className="relative overflow-hidden w-full border-border/40">
+    <Card className="relative overflow-hidden w-full border-border/40 hover:shadow-md transition-all">
       <CardHeader className="absolute top-0 left-0 z-10 p-4 md:p-6 w-full">
         <div className="flex items-start justify-between">
           <div>

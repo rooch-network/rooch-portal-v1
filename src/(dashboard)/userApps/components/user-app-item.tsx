@@ -33,7 +33,7 @@ export const UserAppItem = ({
       key={id}
       className="h-full w-full md:w-[360px] transition-all dark:bg-zinc-800/90 dark:hover:border-primary/70 hover:shadow-md overflow-hidden"
     >
-      <CardHeader className="px-4">
+      <CardHeader className="p-4">
         <div className="flex items-center justify-start gap-x-3">
           <div>
             <Avatar>
@@ -65,7 +65,7 @@ export const UserAppItem = ({
         </div>
       </CardContent>
       <CardFooter className="p-4">
-        <Button variant="default" size="sm" className="w-full">
+        <Button variant="default" size="default" className="w-full">
           <div className="flex items-center justify-center gap-x-2">
             <Send className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             {type}
