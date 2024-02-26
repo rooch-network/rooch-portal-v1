@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { CircleDot, CircleDotDashed, RefreshCcwDot } from "lucide-react";
+import { CircleDot, CircleDotDashed, Copy, RefreshCcwDot } from "lucide-react";
 
 const networks = [
   {
@@ -44,15 +44,27 @@ export const ConnectedAccountTable = () => {
               <TableCell className="font-medium">{network.network}</TableCell>
               {/* 完整地址仅在较大屏幕上显示 */}
               <TableCell className="hidden md:table-cell">
-                {network.address}
+                <span className="flex items-center justify-start gap-0.5 text-muted-foreground">
+                  {network.address}
+                  <Button variant="ghost" size="icon" className=" w-6 h-6">
+                    <Copy className="w-3 h-3" />
+                  </Button>
+                </span>
               </TableCell>
 
               {/* 缩短的地址仅在移动设备上显示 */}
               <TableCell className="md:hidden">
-                {`${network.address.substring(
-                  0,
-                  3
-                )}...${network.address.substring(network.address.length - 3)}`}
+                <span className="flex items-center justify-start gap-0.5 text-muted-foreground">
+                  {`${network.address.substring(
+                    0,
+                    3
+                  )}...${network.address.substring(
+                    network.address.length - 3
+                  )}`}
+                  <Button variant="ghost" size="icon" className=" w-6 h-6">
+                    <Copy className="w-3 h-3" />
+                  </Button>
+                </span>
               </TableCell>
               <TableCell>
                 {network.status ? (
