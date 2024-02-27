@@ -1,4 +1,5 @@
-import { ConnectedAccountTable } from "./components/connected-account-table";
+import { ConnectedAccount } from "./components/connected-account";
+import { ConnectedSites } from "./components/connected-sites";
 
 export const UserSettingsLayout = () => {
   return (
@@ -14,7 +15,18 @@ export const UserSettingsLayout = () => {
           </p>
         </span>
       </div>
-      <ConnectedAccountTable />
+      <ConnectedAccount />
+      {/* Connected Sites section */}
+      <div className="flex items-center justify-between space-y-2">
+        <span>
+          <h1 className="text-3xl font-bold tracking-tight">Connected Sites</h1>
+          <p className="text-muted-foreground text-wrap">
+            Account {} is connected to these sites. They can view your account
+            address.
+          </p>
+        </span>
+      </div>
+      <ConnectedSites />
     </div>
   );
 };
