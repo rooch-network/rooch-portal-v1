@@ -23,7 +23,7 @@ const networks = [
   },
 ];
 
-export const ConnectedAccountTable = () => {
+export const ConnectedAccount = () => {
   return (
     <div className="rounded-lg border w-full">
       <Table>
@@ -35,7 +35,7 @@ export const ConnectedAccountTable = () => {
             <TableHead className="w-[100px]">Networks</TableHead>
             <TableHead>Address</TableHead>
             <TableHead className="text-center">Status</TableHead>
-            <TableHead className="text-right">Action</TableHead>
+            <TableHead className="text-center">Action</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -78,7 +78,7 @@ export const ConnectedAccountTable = () => {
                   </span>
                 )}
               </TableCell>
-              <TableCell className="text-right hidden md:table-cell">
+              <TableCell className="text-center hidden md:table-cell">
                 {network.status ? (
                   <Button
                     className="text-green-500 dark:text-green-400"
@@ -94,7 +94,7 @@ export const ConnectedAccountTable = () => {
                   </Button>
                 )}
               </TableCell>
-              <TableCell className="text-right md:hidden">
+              <TableCell className="text-center md:hidden">
                 {network.status ? (
                   <Button
                     className="text-green-500 dark:text-green-400"
