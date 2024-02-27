@@ -103,7 +103,7 @@ export const ConnectedSites = () => {
                 <Button
                   variant="link"
                   size="sm"
-                  className="text-red-500 dark:hover:text-red-400 hover:text-red-600"
+                  className="text-red-500 dark:text-red-400 dark:hover:text-red-300 hover:text-red-600"
                 >
                   <Unplug className="h-4 w-4 mr-1" />
                   Disconnect
