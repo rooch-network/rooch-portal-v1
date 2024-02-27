@@ -82,7 +82,7 @@ export const ConnectedAccount = () => {
                 {network.status ? (
                   <Button
                     className="text-green-500 dark:text-green-400"
-                    variant="secondary"
+                    variant="link"
                     size="sm"
                     disabled
                   >

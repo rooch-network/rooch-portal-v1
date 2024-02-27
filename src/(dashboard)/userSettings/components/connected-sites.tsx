@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Copy } from "lucide-react";
+import { Copy, Unplug } from "lucide-react";
 
 const apps = [
   {
@@ -103,8 +103,9 @@ export const ConnectedSites = () => {
                 <Button
                   variant="link"
                   size="sm"
-                  className="underline text-blue-500 dark:hover:text-blue-400 hover:text-blue-600"
+                  className="text-red-500 dark:hover:text-red-400 hover:text-red-600"
                 >
+                  <Unplug className="h-4 w-4 mr-1" />
                   Disconnect
                 </Button>
               </TableCell>
