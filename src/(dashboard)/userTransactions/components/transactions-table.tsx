@@ -25,6 +25,26 @@ const txs = [
   {
     type: "transaction",
     txHash:
+      "0xfa3cd16c57a8a0288f16073bf0afbcf9aa1192c532c8fe65712f333282104068",
+    from: "0x1D731fDc4411B961B7067318E549f6A36bf518F1",
+    to: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    amount: 0.232345,
+    asset: "ETH",
+    date: "2023/10/01 14:30",
+  },
+  {
+    type: "transaction",
+    txHash:
+      "0x79be8a1ffe4a0f65b205905352acf4a2b521490fa45600df6ebe62fb24e05b97",
+    from: "0x388C818CA8B9251b393131C08a736A67ccB19297",
+    to: "0xa83114A443dA1CecEFC50368531cACE9F37fCCcb",
+    amount: 0.00188,
+    asset: "ETH",
+    date: "2023/10/01 14:30",
+  },
+  {
+    type: "transaction",
+    txHash:
       "0x79be8a1ffe4a0f65b205905352acf4a2b521490fa45600df6ebe62fb24e05b97",
     from: "0x388C818CA8B9251b393131C08a736A67ccB19297",
     to: "0xa83114A443dA1CecEFC50368531cACE9F37fCCcb",
@@ -44,12 +64,11 @@ export const TransactionsTable = () => {
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">TXs</TableHead>
-            {/* <TableHead>Type</TableHead> */}
             <TableHead>TX Hash/Date</TableHead>
             <TableHead>From/to</TableHead>
             <TableHead>Amount</TableHead>
             <TableHead>Type</TableHead>
-            <TableHead className="text-right">Action</TableHead>
+            <TableHead className="text-center">Action</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -98,9 +117,11 @@ export const TransactionsTable = () => {
                 </Badge>
               </TableCell>
               <TableCell>
-                <span className="text-muted-foreground">{tx.type}</span>
+                <Badge variant="outline" className="text-muted-foreground">
+                  {tx.type}
+                </Badge>
               </TableCell>
-              <TableCell className="text-right">
+              <TableCell className="text-center">
                 <Button
                   variant="link"
                   size="sm"
