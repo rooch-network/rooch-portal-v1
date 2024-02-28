@@ -266,7 +266,7 @@ export const TransactionsTable = () => {
                   </Button>
                 </TableCell>
                 <TableCell>
-                  <div className="flex flex-row md:flex-col items-start justify-start gap-1">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-1">
                     <span className="hover:no-underline text-blue-400 hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200 transition-all cursor-pointer">
                       {/* 前十五位 */}
                       {tx.txHash.substring(0, 15)}...
@@ -277,7 +277,7 @@ export const TransactionsTable = () => {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <div className="flex flex-row md:flex-col items-start justify-start gap-1">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-1">
                     <span className="hover:no-underline text-blue-400 hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200 transition-all cursor-pointer flex items-center justify-start gap-1">
                       <p className="text-primary">From</p>
                       {/* 前八位和后八位，中间用...省略 */}
