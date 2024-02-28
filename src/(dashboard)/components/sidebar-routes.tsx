@@ -1,11 +1,4 @@
-import {
-  Bitcoin,
-  Compass,
-  Layers,
-  LayoutGrid,
-  Scroll,
-  UserCog,
-} from "lucide-react";
+import { Bitcoin, Compass, LayoutGrid, Scroll, UserCog } from "lucide-react";
 import { SidebarItem } from "./sidebar-item";
 import { useTranslation } from "react-i18next";
 
