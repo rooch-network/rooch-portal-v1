@@ -236,10 +236,6 @@ export const TransactionsTable = () => {
     setCurrentPage(pageNumber);
   };
 
-  useEffect(() => {
-    console.log("currentItems", currentItems);
-  }, [currentItems]);
-
   return (
     <div>
       <div className="rounded-lg border w-full">
