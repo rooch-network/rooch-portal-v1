@@ -216,7 +216,7 @@ const txs: TransactionsProps[] = [
 
 export const TransactionsTable = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 8;
 
   // Calculate the indices for the current page
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -248,8 +248,8 @@ export const TransactionsTable = () => {
               <TableHead className="w-[100px]">TXs</TableHead>
               <TableHead>TX Hash/Date</TableHead>
               <TableHead>From/to</TableHead>
-              <TableHead>Amount</TableHead>
               <TableHead>Type</TableHead>
+              <TableHead>Amount</TableHead>
               <TableHead className="text-center">Action</TableHead>
             </TableRow>
           </TableHeader>
@@ -266,7 +266,7 @@ export const TransactionsTable = () => {
                   </Button>
                 </TableCell>
                 <TableCell>
-                  <div className="flex flex-row md:flex-col items-start justify-start gap-1">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-1">
                     <span className="hover:no-underline text-blue-400 hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200 transition-all cursor-pointer">
                       {/* 前十五位 */}
                       {tx.txHash.substring(0, 15)}...
@@ -277,7 +277,7 @@ export const TransactionsTable = () => {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <div className="flex flex-row md:flex-col items-start justify-start gap-1">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-1">
                     <span className="hover:no-underline text-blue-400 hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200 transition-all cursor-pointer flex items-center justify-start gap-1">
                       <p className="text-primary">From</p>
                       {/* 前八位和后八位，中间用...省略 */}
@@ -293,14 +293,14 @@ export const TransactionsTable = () => {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <Badge variant="default">
-                    {tx.amount}
-                    {tx.asset}
+                  <Badge variant="outline" className="text-muted-foreground">
+                    {tx.type}
                   </Badge>
                 </TableCell>
                 <TableCell>
-                  <Badge variant="outline" className="text-muted-foreground">
-                    {tx.type}
+                  <Badge variant="default">
+                    {tx.amount}
+                    {tx.asset}
                   </Badge>
                 </TableCell>
                 <TableCell className="text-center">
@@ -318,17 +318,25 @@ export const TransactionsTable = () => {
           </TableBody>
         </Table>
       </div>
+      {/* Pagination Functionality */}
       <Pagination className="mt-4 justify-end">
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#" />
+            {currentPage !== 1 ? (
+              <PaginationPrevious
+                href="#"
+                onClick={() => {
+                  paginate(currentPage - 1);
+                }}
+              />
+            ) : (
+              <PaginationPrevious href="#" />
+            )}
           </PaginationItem>
           {pageNumbers.map((number) => (
             <PaginationItem key={number}>
               <PaginationLink
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   paginate(number);
                 }}
                 isActive={currentPage === number}
@@ -341,7 +349,16 @@ export const TransactionsTable = () => {
             <PaginationEllipsis />
           </PaginationItem>
           <PaginationItem>
-            <PaginationNext href="#" />
+            {currentPage !== pageNumbers.length ? (
+              <PaginationNext
+                href="#"
+                onClick={() => {
+                  paginate(currentPage + 1);
+                }}
+              />
+            ) : (
+              <PaginationNext href="#" />
+            )}
           </PaginationItem>
         </PaginationContent>
       </Pagination>
