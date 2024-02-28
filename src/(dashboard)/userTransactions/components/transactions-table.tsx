@@ -19,7 +19,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { MenuSquare, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface TransactionsProps {
   type: string;
@@ -216,7 +216,7 @@ const txs: TransactionsProps[] = [
 
 export const TransactionsTable = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 10;
+  const itemsPerPage = 8;
 
   // Calculate the indices for the current page
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -236,6 +236,10 @@ export const TransactionsTable = () => {
     setCurrentPage(pageNumber);
   };
 
+  useEffect(() => {
+    console.log("currentItems", currentItems);
+  }, [currentItems]);
+
   return (
     <div>
       <div className="rounded-lg border w-full">
@@ -248,8 +252,8 @@ export const TransactionsTable = () => {
               <TableHead className="w-[100px]">TXs</TableHead>
               <TableHead>TX Hash/Date</TableHead>
               <TableHead>From/to</TableHead>
-              <TableHead>Amount</TableHead>
               <TableHead>Type</TableHead>
+              <TableHead>Amount</TableHead>
               <TableHead className="text-center">Action</TableHead>
             </TableRow>
           </TableHeader>
@@ -293,14 +297,14 @@ export const TransactionsTable = () => {
                   </div>
                 </TableCell>
                 <TableCell>
-                  <Badge variant="default">
-                    {tx.amount}
-                    {tx.asset}
+                  <Badge variant="outline" className="text-muted-foreground">
+                    {tx.type}
                   </Badge>
                 </TableCell>
                 <TableCell>
-                  <Badge variant="outline" className="text-muted-foreground">
-                    {tx.type}
+                  <Badge variant="default">
+                    {tx.amount}
+                    {tx.asset}
                   </Badge>
                 </TableCell>
                 <TableCell className="text-center">
@@ -318,17 +322,25 @@ export const TransactionsTable = () => {
           </TableBody>
         </Table>
       </div>
+      {/* Pagination Functionality */}
       <Pagination className="mt-4 justify-end">
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#" />
+            {currentPage !== 1 ? (
+              <PaginationPrevious
+                href="#"
+                onClick={() => {
+                  paginate(currentPage - 1);
+                }}
+              />
+            ) : (
+              <PaginationPrevious href="#" />
+            )}
           </PaginationItem>
           {pageNumbers.map((number) => (
             <PaginationItem key={number}>
               <PaginationLink
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   paginate(number);
                 }}
                 isActive={currentPage === number}
@@ -341,7 +353,16 @@ export const TransactionsTable = () => {
             <PaginationEllipsis />
           </PaginationItem>
           <PaginationItem>
-            <PaginationNext href="#" />
+            {currentPage !== pageNumbers.length ? (
+              <PaginationNext
+                href="#"
+                onClick={() => {
+                  paginate(currentPage + 1);
+                }}
+              />
+            ) : (
+              <PaginationNext href="#" />
+            )}
           </PaginationItem>
         </PaginationContent>
       </Pagination>
