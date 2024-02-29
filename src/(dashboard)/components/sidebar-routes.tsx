@@ -1,11 +1,4 @@
-import {
-  Bitcoin,
-  Compass,
-  Layers,
-  LayoutGrid,
-  Scroll,
-  UserCog,
-} from "lucide-react";
+import { Bitcoin, Compass, LayoutGrid, Scroll, UserCog } from "lucide-react";
 import { SidebarItem } from "./sidebar-item";
 import { useTranslation } from "react-i18next";
 
@@ -17,7 +10,6 @@ export const SidebarRoutes = ({ onClose }: SidebarRoutesProps) => {
   const { t } = useTranslation();
   const routes = [
     { icon: Bitcoin, label: t("Sidebar.assets"), href: "/" },
-    { icon: Layers, label: t("Sidebar.staking"), href: "/staking" },
     { icon: Scroll, label: t("Sidebar.mint"), href: "/mint" },
     { icon: LayoutGrid, label: t("Sidebar.apps"), href: "/apps" },
     {
