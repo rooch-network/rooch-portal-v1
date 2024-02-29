@@ -3,7 +3,7 @@ import { ConnectedSites } from "./components/connected-sites";
 
 export const UserSettingsLayout = () => {
   return (
-    <div className="h-full flex-1 flex-col space-y-8 flex">
+    <div className="h-full flex-1 flex-col space-y-6 flex">
       {/* Connected Account section */}
       <div className="flex items-center justify-between space-y-2">
         <span>

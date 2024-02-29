@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Table,
   TableBody,
@@ -9,8 +10,9 @@ import {
 } from "@/components/ui/table";
 import { SftsProps } from "../common/mint-interface";
 import { Progress } from "@/components/ui/progress";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+
+import { useNavigate } from "react-router-dom";
 
 const sfts: SftsProps[] = [
   {
@@ -41,6 +43,12 @@ const sfts: SftsProps[] = [
 
 export const FeaturedSfts = () => {
   const [progress, setProgress] = useState(0);
+  const navigate = useNavigate();
+
+  const handleMint = (sft: SftsProps) => {
+    console.log("Minting SFT with ID:", sft.id);
+    navigate(`/mint/sft/${sft.id}`);
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
@@ -75,7 +83,11 @@ export const FeaturedSfts = () => {
                 </div>
               </TableCell>
               <TableCell className="text-center">
-                <Button variant="default" size="sm">
+                <Button
+                  variant="default"
+                  size="sm"
+                  onClick={() => handleMint(sft)}
+                >
                   Mint
                 </Button>
               </TableCell>
