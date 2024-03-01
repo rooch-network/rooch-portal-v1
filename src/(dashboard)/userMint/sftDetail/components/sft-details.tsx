@@ -57,7 +57,7 @@ export function SftDetails() {
           </Card>
         </div>
         <div className="w-full h-full">
-          <Card className="border-border/40 shadow-lg">
+          <Card className="border-border/40 shadow-lg px-4">
             <CardHeader>
               <CardTitle>Progress</CardTitle>
               <CardDescription>
