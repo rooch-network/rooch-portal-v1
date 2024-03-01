@@ -1,5 +1,7 @@
 import { SftTabs } from "./components/sft-tabs";
 
+import { SftTabs } from "./components/sft-tabs";
+
 export const UserMintLayout = () => {
   return (
     <div className="h-full flex-1 flex-col space-y-6 flex">
