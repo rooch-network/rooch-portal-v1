@@ -307,7 +307,7 @@ export const TransactionsTable = () => {
                   <Button
                     variant="link"
                     size="sm"
-                    className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition-all"
+                    className="text-blue-400 hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200 transition-all"
                   >
                     <ExternalLink className="w-4 h-4 mr-1" />
                     View
@@ -340,6 +340,7 @@ export const TransactionsTable = () => {
                   paginate(number);
                 }}
                 isActive={currentPage === number}
+                className="cursor-pointer"
               >
                 {number}
               </PaginationLink>
