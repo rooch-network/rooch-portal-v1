@@ -13,6 +13,7 @@ import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 
 import { useNavigate } from "react-router-dom";
+import { MousePointer2 } from "lucide-react";
 
 const sfts: SftsProps[] = [
   {
@@ -84,10 +85,12 @@ export const FeaturedSfts = () => {
               </TableCell>
               <TableCell className="text-center">
                 <Button
-                  variant="default"
+                  variant="link"
                   size="sm"
+                  className="dark:text-teal-400 dark:hover:text-teal-300 text-teal-500 hover:text-teal-600 font-semibold"
                   onClick={() => handleMint(sft)}
                 >
+                  <MousePointer2 className="w-4 h-4 mr-1" />
                   Mint
                 </Button>
               </TableCell>

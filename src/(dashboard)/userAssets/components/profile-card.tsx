@@ -47,7 +47,7 @@ to-teal-500 dark:from-amber-600 dark:to-teal-600 object-cover w-full h-28 md:h-3
           />
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between relative pb-8 md:pb-14 px-4 md:px-6 dark:bg-zinc-800/90 h-full">
+      <CardFooter className="flex justify-between relative pb-8 md:pb-14 px-4 md:px-6 dark:bg-primary-foreground shadow-md h-full">
         <div className="absolute">
           <Avatar className="w-12 h-12 md:w-20 md:h-20">
             <AvatarImage src="https://github.com/shadcn.png" alt="Logic" />
