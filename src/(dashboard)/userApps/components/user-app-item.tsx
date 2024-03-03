@@ -71,7 +71,11 @@ export const UserAppItem = ({
         </div>
       </CardContent>
       <CardFooter className="p-4">
-        <Button variant="default" size="default" className="w-full">
+        <Button
+          variant="default"
+          size="default"
+          className="w-full dark:bg-teal-500 dark:hover:bg-teal-400 text-white bg-teal-500 hover:bg-teal-600 font-semibold"
+        >
           <div className="flex items-center justify-center gap-x-2">
             <Send className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
             {type}

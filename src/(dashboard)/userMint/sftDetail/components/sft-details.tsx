@@ -19,37 +19,37 @@ export function SftDetails() {
 
   return (
     <>
-      <div className="flex items-center justify-start w-full gap-2 text-muted-foreground mt-2">
+      <div className="flex items-center justify-start w-full gap-2 text-muted-foreground dark:text-teal-50 mt-2">
         <span className="text-sm">Process</span>
         <Progress value={progress} />
         <span className="text-sm flex items-center gap-1">
           <p className="font-semibold">84.4%</p>
-          <p className="text-muted-foreground/80">Minted</p>
+          <p>Minted</p>
         </span>
       </div>
       <div className="grid md:grid-cols-2 gap-x-6 w-full mt-6 gap-4 md:gap-6">
         <div className="w-full h-full">
-          <Card className="border-border/40 shadow-lg">
-            <CardHeader>
+          <Card className="border-border/40 shadow-xl">
+            <CardHeader className="dark:text-teal-100">
               <CardTitle>Overview</CardTitle>
-              <CardDescription>
+              <CardDescription className="dark:text-teal-50/70">
                 Deploy your new project in one-click.
               </CardDescription>
             </CardHeader>
-            <CardContent className="text-sm text-muted-foreground dark:text-primary grid md:grid-cols-2 gap-6 w-full px-6 md:px-0">
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+            <CardContent className="text-sm dark:text-primary grid md:grid-cols-2 gap-6 w-full px-6 md:px-0">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
@@ -58,26 +58,26 @@ export function SftDetails() {
         </div>
         <div className="w-full h-full">
           <Card className="border-border/40 shadow-lg px-4">
-            <CardHeader>
+            <CardHeader className="dark:text-teal-100">
               <CardTitle>Progress</CardTitle>
-              <CardDescription>
+              <CardDescription className="dark:text-teal-50/70">
                 Deploy your new project in one-click.
               </CardDescription>
             </CardHeader>
             <CardContent className="text-sm text-muted-foreground dark:text-primary grid md:grid-cols-2 gap-6 w-full px-6 md:px-0">
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
-              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28">
+              <div className="flex flex-row-reverse md:flex-col items-center justify-between md:justify-center gap-2 w-full md:h-28 dark:text-teal-50">
                 <span className="text-4xl font-medium md:text-5xl">12,333</span>
                 <span className="text-base md:text-sm">Distribution Type</span>
               </div>
@@ -85,7 +85,7 @@ export function SftDetails() {
           </Card>
         </div>
       </div>
-      <Button className="rounded-lg w-full mt-4 mb-2 md:mt-8 md:mb-6 h-12 bg-blue-900 hover:bg-blue-950 dark:text-white dark:bg-blue-800 dark:hover:bg-opacity-75">
+      <Button className="rounded-lg w-full mt-4 mb-2 md:mt-8 md:mb-6 h-12 dark:bg-teal-500 dark:hover:bg-teal-400 text-white bg-teal-500 hover:bg-teal-600 font-semibold">
         Mint
       </Button>
     </>

@@ -55,11 +55,11 @@ export const SftTabHeader = () => {
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button
-            variant="ghost"
+            variant="outline"
             role="combobox"
             aria-expanded={open}
             size="sm"
-            className="w-full md:w-[150px] justify-between"
+            className="w-full md:w-[150px] justify-between rounded-lg"
           >
             {value
               ? sfts.find((sft) => sft.value === value)?.label

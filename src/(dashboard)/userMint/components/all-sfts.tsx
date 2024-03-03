@@ -11,6 +11,7 @@ import { SftsProps } from "../common/mint-interface";
 import { Progress } from "@/components/ui/progress";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { MousePointer2 } from "lucide-react";
 
 const sfts: SftsProps[] = [
   {
@@ -81,7 +82,12 @@ export const AllSfts = () => {
                 </div>
               </TableCell>
               <TableCell className="text-center">
-                <Button variant="default" size="sm">
+                <Button
+                  variant="link"
+                  size="sm"
+                  className="dark:text-teal-400 dark:hover:text-teal-300 text-teal-500 hover:text-teal-600 font-semibold"
+                >
+                  <MousePointer2 className="w-4 h-4 mr-1" />
                   Mint
                 </Button>
               </TableCell>
