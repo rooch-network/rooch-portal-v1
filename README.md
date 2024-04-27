@@ -1,8 +1,6 @@
 # Rooch Portal
 
-`rooch-portal` has already moved into the branch `rooch`.
-
----
+## `rooch-portal` has already moved into the branch [Rooch](https://github.com/rooch-network/rooch/tree/main/rooch-portal-v1).
 
 ## Overview
 
