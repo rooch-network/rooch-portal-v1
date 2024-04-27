@@ -1,5 +1,9 @@
 # Rooch Portal
 
+`rooch-portal` has already moved into the branch `rooch`.
+
+---
+
 ## Overview
 
 Rooch Portal is a comprehensive dashboard designed to simplify the management of Bitcoin wallets, such as Unisat, and to provide users with an intuitive interface to manage their Bitcoin and Rooch accounts. This portal offers a centralized platform for tracking and organizing all assets, inscriptions, and other related financial activities.
